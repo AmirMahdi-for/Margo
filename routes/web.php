@@ -16,3 +16,18 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/articels', function(){
+    return ('hello articels');
+});
+
+Route::prefix('admin')->group(function(){
+
+    Route::get('articles',function(){
+        return 'admin articles';
+    });
+
+    Route::get('users', function(){
+        return 'admin users';
+    });
+});
